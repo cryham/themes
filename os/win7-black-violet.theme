@@ -1,0 +1,166 @@
+
+[Theme]
+; Windows Classic - IDS_THEME_DISPLAYNAME_CLASSIC
+DisplayName=Black Violet
+
+; Computer - SHIDI_SERVER
+[CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-109
+
+; UsersFiles - SHIDI_USERFILES
+[CLSID\{59031A47-3F72-44A7-89C5-5595FE6B30EE}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-123
+
+; Network - SHIDI_MYNETWORK
+[CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-25
+
+; Recycle Bin - SHIDI_RECYCLERFULL SHIDI_RECYCLER
+[CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon]
+Full=%SystemRoot%\System32\imageres.dll,-54
+Empty=%SystemRoot%\System32\imageres.dll,-55
+
+[Control Panel\Cursors]
+Arrow=%SystemRoot%\cursors\arrow_r.cur
+Help=%SystemRoot%\cursors\help_r.cur
+AppStarting=%SystemRoot%\cursors\wait_r.cur
+Wait=%SystemRoot%\cursors\busy_r.cur
+NWPen=%SystemRoot%\cursors\pen_r.cur
+No=%SystemRoot%\cursors\no_r.cur
+SizeNS=%SystemRoot%\cursors\size4_r.cur
+SizeWE=%SystemRoot%\cursors\size3_r.cur
+Crosshair=%SystemRoot%\cursors\cross_r.cur
+IBeam=%SystemRoot%\cursors\beam_r.cur
+SizeNWSE=%SystemRoot%\cursors\size2_r.cur
+SizeNESW=%SystemRoot%\cursors\size1_r.cur
+SizeAll=%SystemRoot%\cursors\move_r.cur
+UpArrow=%SystemRoot%\cursors\up_r.cur
+DefaultValue=Windows Black
+Hand=
+Link=
+
+[Control Panel\Desktop]
+Wallpaper=%SystemRoot%\Web\Wallpaper\shaiya4.jpg
+TileWallpaper=0
+WallpaperStyle=6
+Pattern=
+
+[Control Panel\Desktop\WindowMetrics]
+
+[Metrics]
+NonclientMetrics=88 1 0 0 1 0 0 0 16 0 0 0 16 0 0 0 16 0 0 0 16 0 0 0 244 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16 0 0 0 16 0 0 0 244 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16 0 0 0 16 0 0 0 244 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 241 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 243 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0                                      
+LangID=1033
+IconMetrics=76 0 0 0 75 0 0 0 75 0 0 0 1 0 0 0 244 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 188 2 0 0 0 0 0 1 0 0 0 0 84 97 104 111 109 97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0                                      
+
+[VisualStyles]
+Path=
+ColorStyle=Windows Classic
+Size=Normal
+Transparency=0
+ColorizationColor=0X6B74B8FC
+Composition=0
+VisualStyleVersion=10
+
+[boot]
+SCRNSAVE.EXE=
+
+[MasterThemeSelector]
+MTSM=DABJDKT
+
+[Sounds]
+; IDS_SCHEME_DEFAULT
+SchemeName=No Sounds (modified)
+[Control Panel\Colors]
+Scrollbar=5 5 10
+Background=0 0 0
+ActiveTitle=0 0 0
+InactiveTitle=10 20 40
+Menu=0 0 0
+Window=0 0 0
+WindowFrame=0 0 0
+MenuText=119 115 178
+WindowText=135 127 181
+TitleText=150 154 211
+ActiveBorder=0 0 0
+InactiveBorder=0 0 0
+AppWorkspace=0 0 0
+Hilight=28 21 46
+HilightText=201 222 245
+GrayText=81 83 101
+InactiveTitleText=134 139 184
+ButtonFace=7 6 11
+ButtonShadow=0 0 0
+ButtonText=135 125 198
+ButtonHilight=80 51 160
+ButtonDkShadow=0 0 0
+ButtonLight=0 0 0
+InfoText=223 238 255
+InfoWindow=31 27 48
+ButtonAlternateFace=82 52 72
+HotTrackingColor=120 205 255
+GradientActiveTitle=74 49 149
+GradientInactiveTitle=39 29 71
+MenuHilight=98 88 128
+MenuBar=65 51 80
+[AppEvents\Schemes\Apps\.Default\.Default]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\ChangeTheme]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\CriticalBatteryAlarm]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\DeviceConnect]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\DeviceDisconnect]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\DeviceFail]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\FaxBeep]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\LowBatteryAlarm]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\MailBeep]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\SystemAsterisk]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\SystemExclamation]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\SystemExit]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\SystemHand]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\SystemNotification]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\WindowsLogoff]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\WindowsLogon]
+DefaultValue=
+[AppEvents\Schemes\Apps\.Default\WindowsUAC]
+DefaultValue=
+[AppEvents\Schemes\Apps\Explorer\BlockedPopup]
+DefaultValue=
+[AppEvents\Schemes\Apps\Explorer\EmptyRecycleBin]
+DefaultValue=
+[AppEvents\Schemes\Apps\Explorer\FaxError]
+DefaultValue=
+[AppEvents\Schemes\Apps\Explorer\FaxLineRings]
+DefaultValue=
+[AppEvents\Schemes\Apps\Explorer\FaxSent]
+DefaultValue=
+[AppEvents\Schemes\Apps\Explorer\FeedDiscovered]
+DefaultValue=
+[AppEvents\Schemes\Apps\Explorer\Navigating]
+DefaultValue=
+[AppEvents\Schemes\Apps\Explorer\SecurityBand]
+DefaultValue=
+[AppEvents\Schemes\Apps\sapisvr\DisNumbersSound]
+DefaultValue=
+[AppEvents\Schemes\Apps\sapisvr\HubOffSound]
+DefaultValue=
+[AppEvents\Schemes\Apps\sapisvr\HubOnSound]
+DefaultValue=
+[AppEvents\Schemes\Apps\sapisvr\HubSleepSound]
+DefaultValue=
+[AppEvents\Schemes\Apps\sapisvr\MisrecoSound]
+DefaultValue=
+[AppEvents\Schemes\Apps\sapisvr\PanelSound]
+DefaultValue=
