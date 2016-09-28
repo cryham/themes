@@ -330,8 +330,8 @@
         <Attributes>**</Attributes>
       </Filter>
       <Filter>
-        <Name>*.mp3;M;M?;TR;skin*;theme*;sky*;mantis;</Name>
-        <FileMasks>*.mp3;M;M?;TR;skin*;theme*;sky*;mantis;</FileMasks>
+        <Name>*.mp3;skin*;theme*;sky*;mantis;</Name>
+        <FileMasks>*.mp3;skin*;theme*;sky*;mantis;</FileMasks>
         <Color>16756250</Color>
         <Attributes>**</Attributes>
       </Filter>
@@ -480,8 +480,8 @@
         <Attributes>**</Attributes>
       </Filter>
       <Filter>
-        <Name>*.inf;*.isu;*.uninstall;overlay*;*-.pdf;*sndtrk*;</Name>
-        <FileMasks>*.inf;*.isu;*.uninstall;overlay*;*-.pdf;*sndtrk*;</FileMasks>
+        <Name>*.inf;*.isu;*.uninstall;overlay*;*-.pdf;</Name>
+        <FileMasks>*.inf;*.isu;*.uninstall;overlay*;*-.pdf;</FileMasks>
         <Color>52942</Color>
         <Attributes>**</Attributes>
       </Filter>
