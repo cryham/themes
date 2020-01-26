@@ -1,0 +1,34 @@
+
+/* Hide Tabs from top */
+#TabsToolbar, #tabbrowser-tabs {
+  visibility: collapse;
+}
+
+/* for window buttons right,top: min _ max [] close X */
+#nav-bar {
+    margin-top: -28px;
+    margin-right: 90px;
+    margin-bottom: 2px;
+}
+
+/* Hide bookmark Thumbnail and Favicon */
+#editBookmarkPanelTitle,
+#editBookmarkPanelImage,
+#editBookmarkPanelFavicon,
+#editBookmarkPanelFaviconContainer {
+    display: none !important;
+}
+
+/* Add/Edit Bookmarks Drop-down - Taller Folder List */
+#editBMPanel_folderTree {
+    min-height: 60em !important;
+}
+
+/* Allow minimal Sidebar for All Tabs*/
+#sidebar {
+    min-width: 8px !important;
+}
+#sidebar-close,
+#sidebar-header {
+    display: none !important;
+}
