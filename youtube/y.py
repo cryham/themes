@@ -19,7 +19,9 @@ printable = set(string.printable)
 groups = [
     # keyword,  group name,  title in html
     ['----', 'other', 'Other 🚗🚀'],  # default
+    ['movie','movies', 'Movies 🎥🎬📺'],
     ['fun',  'fun',   'Fun 😂😀😜'],
+    ['tiktok', 'fun', ''],
     ['games','games', 'Games 🖥️🕹️'],
 
     ['birds', 'nature', 'Nature 🌺🍁🌳🌲🏔️🏝️'],
@@ -146,7 +148,7 @@ expfile = open('web.html', 'w')
 expfile.write('<h1>Overview</h1>\n')
 expfile.write('<p>Total playlists: {}</p>\n'.format(playlists))
 expfile.write('<p>Total videos: {}</p>\n'.format(videos))
-expfile.write('<h1>Fun, Games, Nature</h1><br />\n')
+expfile.write('<h1>Movies, Fun, Games, Nature</h1><br />\n')
 g = ''
 for p in spls:
     if g != p.group2:
