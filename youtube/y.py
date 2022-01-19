@@ -9,6 +9,7 @@
 
 import os
 import re
+import datetime
 from operator import itemgetter, attrgetter
 import string
 printable = set(string.printable)
@@ -125,6 +126,8 @@ spls = sorted(pls, key=attrgetter('group'))
 
 
 #  print  ------------------------
+date_str = datetime.datetime.today().strftime('%Y-%m-%d %H:%M')
+
 g = ''
 videos = 0  # all count
 for p in spls:
@@ -141,13 +144,19 @@ for p in spls:
     
 print('\nTotal playlists: {}'.format(playlists))
 print('Total videos: {}'.format(videos))
+print('Last updated on: {}'.format(date_str))
 
 
 #  export html to file  ------------------------
+
 expfile = open('web.html', 'w')
-expfile.write('<h1>Overview</h1>\n')
-expfile.write('<p>Total playlists: {}</p>\n'.format(playlists))
-expfile.write('<p>Total videos: {}</p>\n'.format(videos))
+#expfile.write('<h1>Overview</h1>\n')
+expfile.write('This page gathers my playlists from my <a href="https://www.youtube.com/channel/UCzFcqUTGAUqpaNk4k7BQg6w/playlists?view=1&sort=lad" target="_blank" rel="noopener">youtube channel.</a>\n')
+expfile.write('<em>Because browsing them all there is hopeless. Grouping and sorting by name is impossible.</em>\n\n')
+expfile.write('Total playlists: {}</p>\n'.format(playlists))
+expfile.write('Total videos: {}</p>\n\n'.format(videos))
+expfile.write('Last updated on: {}</p>\n'.format(date_str))
+expfile.write('&nbsp;\n<hr />\n\n')
 expfile.write('<h1>Movies, Fun, Games, Nature</h1><br />\n')
 g = ''
 for p in spls:
