@@ -1,0 +1,101 @@
+
+[Theme]
+; High Contrast Black - IDS_THEME_DISPLAYNAME_HCBLACK
+DisplayName=black-violet
+ThemeId={94B5F8D4-7051-4224-AB66-3C2927237F0A}
+
+; Computer - SHIDI_SERVER
+[CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-109
+
+; UsersFiles - SHIDI_USERFILES
+[CLSID\{59031A47-3F72-44A7-89C5-5595FE6B30EE}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-123
+
+; Network - SHIDI_MYNETWORK
+[CLSID\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\DefaultIcon]
+DefaultValue=%SystemRoot%\System32\imageres.dll,-25
+
+; Recycle Bin - SHIDI_RECYCLERFULL SHIDI_RECYCLER
+[CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\DefaultIcon]
+Full=%SystemRoot%\System32\imageres.dll,-54
+Empty=%SystemRoot%\System32\imageres.dll,-55
+
+[Control Panel\Colors]
+ActiveTitle=40 40 60
+Background=0 0 0
+ButtonFace=17 17 20
+ButtonText=184 184 194
+GrayText=145 148 149
+Hilight=69 91 130
+HilightText=234 235 240
+HotTrackingColor=33 125 205
+InactiveTitle=10 30 50
+InactiveTitleText=185 185 195
+TitleText=205 205 215
+Window=0 0 0
+WindowText=163 164 194
+Scrollbar=0 0 0
+Menu=0 0 0
+WindowFrame=15 15 20
+MenuText=165 165 185
+ActiveBorder=15 15 19
+InactiveBorder=10 11 15
+AppWorkspace=0 0 0
+ButtonShadow=28 28 32
+ButtonHilight=122 122 142
+ButtonDkShadow=15 15 21
+ButtonLight=35 45 55
+InfoText=215 225 235
+InfoWindow=0 0 0
+ButtonAlternateFace=92 92 92
+GradientActiveTitle=48 50 68
+GradientInactiveTitle=10 18 30
+MenuHilight=128 0 128
+MenuBar=0 0 0
+
+[Control Panel\Cursors]
+Arrow=%SystemRoot%\cursors\arrow_r.cur
+Help=%SystemRoot%\cursors\help_r.cur
+AppStarting=%SystemRoot%\cursors\wait_r.cur
+Wait=%SystemRoot%\cursors\busy_r.cur
+NWPen=%SystemRoot%\cursors\pen_r.cur
+No=%SystemRoot%\cursors\no_r.cur
+SizeNS=%SystemRoot%\cursors\size4_r.cur
+SizeWE=%SystemRoot%\cursors\size3_r.cur
+Crosshair=%SystemRoot%\cursors\cross_r.cur
+IBeam=%SystemRoot%\cursors\beam_r.cur
+SizeNWSE=%SystemRoot%\cursors\size2_r.cur
+SizeNESW=%SystemRoot%\cursors\size1_r.cur
+SizeAll=%SystemRoot%\cursors\move_r.cur
+UpArrow=%SystemRoot%\cursors\up_r.cur
+DefaultValue=Windows Black
+Hand=
+Link=
+
+[Control Panel\Desktop]
+Wallpaper=
+Pattern=
+MultimonBackgrounds=0
+PicturePosition=4
+
+[VisualStyles]
+Path=%SystemRoot%\resources\themes\Aero\AeroLite.msstyles
+ColorStyle=NormalColor
+Size=NormalSize
+HighContrast=3
+ColorizationColor=0X3A409EFE
+AutoColorization=0
+AppMode=Light
+SystemMode=Dark
+VisualStyleVersion=10
+
+[boot]
+SCRNSAVE.EXE=
+
+[MasterThemeSelector]
+MTSM=RJSPBS
+
+[Sounds]
+; IDS_SCHEME_DEFAULT
+SchemeName=No Sounds
