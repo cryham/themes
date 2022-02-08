@@ -16,17 +16,17 @@ import string
 
 #  const dict  bookmark tag shorcuts
 #-------------------------------------
-sh_tag = {
-'sf':'SciFi',
-'act':'Action','cmd':'Comedy','rom':'Romance',
-'crm':'Crime','drm':'Drama','prd':'Parody',
-'wst':'Western','hor':'Horror','mst':'Mystery',
-'adv':'Adventure','fan':'Fantasy',
-'3d':'3D','gam':'Game','drw':'Drawing', # style
-'cmc':'Comic','bok':'Book','sph':'SuperHero', # based
-'spc':'Space','ftr':'Future','tmt':'Time', # scifi
-'mgc':'Magic','zmb':'Zombie','aln':'Alien', # theme
-'hs':'School','drg':'Drugs','war':'War',  # topic
+sh_tag = {  # 🎭📚⚔️ 🕒🕰🕰️ 🪄✨ 🕹🎮 🧗‍♂️⛰️ 🖼🖼️ 🪑🐎
+'sf':'🔮SciFi',
+'act':'🔫Action','cmd':'😁Comedy','rom':'💕Romance',
+'crm':'⚖️Crime','drm':'☹️Drama','prd':'🤪Parody',
+'wst':'🐎Western','hor':'😱Horror','mst':'❔Mystery',
+'adv':'⛰️Adventure','fan':'🐉Fantasy',
+'3d':'💎3D','gam':'🎮Game','drw':'🖼️Drawing', # style
+'cmc':'🎨Comic','bok':'📖Book','sph':'🦸SuperHero', # based
+'spc':'🌌Space','ftr':'🔭Future','tmt':'🕒Time', # scifi
+'mgc':'✨Magic','zmb':'🧟Zombie','aln':'👽Alien', # theme
+'hs':'🏫School','drg':'💊Drugs','war':'💣War',  # topic
 }
 
 #------------------------------------------------
@@ -126,10 +126,10 @@ print('Last updated on: {}'.format(date_str))
 
 
 #  export to file  ------------------------
-sAll = sorted(all, key=attrgetter('year'))
+sAll = sorted(all, key=attrgetter('year'), reverse=True)  # new to old
 
 expfile = open('im.csv', 'w')
-expfile.write('year,movie title with link,rate,tags\n')
+expfile.write('Year,Title with link,IMDb rate,Genre & tags\n')
 for m in sAll:
     expfile.write(m.year+',' #+m.movie+','+
     '"<a href=""'+m.url+'"" rel=""noopener"" target=""_blank"">'+m.movie+'</a>"'
