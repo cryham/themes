@@ -1,43 +1,18 @@
+/*  no comments */
 #comments {  margin: 2220px 0px 0px 0px !important;  visibility: hidden !important;  }
 
-/*  slider thumb  and  playlist checkbox  []  */
+
+/*  Slider thumb -=--  and  playlist checkbox  []  */
 ytd-app[is-watch-page] {    background-color: #0A0A0D !important;  }
 .ytp-scrubber-container {   background-color: #3FF !important;  }
 #checkbox .checked/*,#checkmark*/ {   background-color: #3FF !important;  }
 
-/*  add to pls  long ==  */
-ytd-add-to-playlist-renderer[dialog] #playlists.ytd-add-to-playlist-renderer {
-    max-height: 1020px !important;  }
-#playlist, ytd-watch-flexy {
-    height: 900px !important;  max-height: 1020px !important;  }
-
-ytd-playlist-add-to-option-renderer, ytd-add-to-playlist-renderer,
-.tp-yt-paper-checkbox,
-div.ytd-add-to-playlist-renderer, .paper-checkbox, .checkbox-height  {
-    --paper-checkbox-ink-size: 24px !important;
-    font-size: 16px !important;
-    margin: 0 0 0 0 !important;
-    padding: 0 0 0 0 !important;  }
-paper-checkbox { height: 16px;  }
-/*.html5-video-container  controlslist="nodownload" } */
-
-/*  right playlist  wide long =  */
-ytd-playlist-panel-renderer.style-scope, .playlist-items,
-#secondary ytd-playlist-panel-renderer.style-scope {  width: 550px !important;
-    height: 1300px !important;  flex: 1 0 796px;  }
-/*ytd-page-manager {  height: 1200px !important;  }*/
-
-/*  general  */
-div.ytd-playlist-panel-renderer {  border: none !important;  }
-#primary, #secondary {  padding-top: 0px !important;  }
-ytd-menu-renderer.ytd-playlist-panel-renderer { height: 20px; }
-.ytd-toggle-button-renderer { height: 11px !important; }
-/*  captions  */
+/*  Captions  text  */
 .caption-window, .ytp-caption-segment,
 span.caption-visual-line {   color: #CFF !important;  font-size: 26px !important;
     text-shadow: rgb(80, 66, 122) 1px 1px 3px, rgb(42, 36, 100) 0px 0px 6px !important;  }
 
-/*  player  times  big :  */
+/*  player  Times  big :  */
 .ytp-time-current  {  font-size: 32px !important;  color: #CFF !important;
     text-shadow: rgb(12, 106, 110) 1px 1px 4px, rgb(22, 56, 50) 0px 0px 8px !important;  }
 .ytp-time-duration {  font-size: 32px !important;  color: #9DF !important;
@@ -46,8 +21,28 @@ span.caption-visual-line {   color: #CFF !important;  font-size: 26px !important
 #enhancer-for-youtube-player-info  {  /* vol % */ text-align: left;  left: 10px;
     font-size: 36px !important;  color: #DCF !important;
     text-shadow: rgb(80, 66, 122) 1px 1px 3px, rgb(42, 36, 100) 0px 0px 6px !important;  }
+.ytp-time-seeking  {  display: none !important;  }
 
-/*  pls view  thumbs, counts  */
+
+/*  List  add to playlist  Save dialog  long ==  */
+ytd-add-to-playlist-renderer[dialog] #playlists.ytd-add-to-playlist-renderer {
+    max-height: 1020px !important;  }
+ytd-playlist-add-to-option-renderer, ytd-add-to-playlist-renderer,
+.tp-yt-paper-checkbox,
+div.ytd-add-to-playlist-renderer, .paper-checkbox, .checkbox-height  {
+    --paper-checkbox-ink-size: 24px !important;
+    font-size: 16px !important;
+    margin: 0 0 0 0 !important;
+    padding: 0 0 0 0 !important;  }
+paper-checkbox { height: 16px;  }
+
+
+/*  Right playlist view, near player  narrow = , #meta */
+.ytd-playlist-panel-video-renderer.style-scope.yt-simple-endpoint
+{   height: 40px !important;  }
+
+
+/*  Big playlists only, grid view  thumbs, big counts  */
 ytd-thumbnail-overlay-side-panel-renderer
 {  width: 40px !important;  left: 0px !important;  float: left !important;  }
 ytd-playlist-thumbnail yt-formatted-string {
@@ -56,34 +51,25 @@ ytd-playlist-thumbnail yt-formatted-string {
 ytd-thumbnail-overlay-side-panel-renderer > yt-icon
 {   display: none !important;  }
 
-/*  full playlist view  narrow =  */
-ytd-playlist-panel-video-renderer, #meta {   height: 40px !important;  }
-#content, #playlist-items {  padding: 0 0 0 0 !important;  }
-#video-title { margin: 0 0 0 0 !important;  }
-#sort-filter-menu {  padding: 2 2 2 2 !important;  }
+/*  Playlist only view   narrow = , #meta */
 ytd-playlist-video-renderer.style-scope {  height: 40px !important;  font-size: 22px !important;  }
-#stats {  font-size: 18px !important;  color: #CCF !important;  }
+#content, #playlist-items {  padding: 0 0 0 0 !important;  }
+#video-title {  margin: 0 0 0 0 !important;  }
+#sort-filter-menu {  padding: 2px 2px 2px 2px !important;  }
+#stats {  font-size: 18px !important;  color: #CCF !important;  }/**/
 
-/*  pls  img small  narrow =  */
-.yt-img-shadow
-{  margin: 0px 0px 0 0 !important;  }
-#primary ytd-item-section-renderer.style-scope .ytd-playlist-video-renderer a #thumbnail yt-img-shadow
-{  width: 90px !important;  left: 0px !important;  float: left !important;  }
-#primary ytd-item-section-renderer.style-scope .ytd-playlist-video-renderer ytd-thumbnail #thumbnail
-{  width: 190px !important;  left: 0px !important;  float: left !important;  margin-right: 5px !important;  }
 
-.playlist-items #wc-endpoint #thumbnail
-{  width: 110px !important;  left: -20px !important;  float: left !important;  }
-#primary ytd-item-section-renderer.style-scope .ytd-playlist-video-renderer #thumbnail,
-.playlist-items #wc-endpoint #thumbnail
-{  height: 40px !important;  }
+/*  song image - pls view and pls right  */
+/*yt-img-shadow,*/
+/*ytd-thumbnail
+/*#thumbnail-container #thumbnail,/**/
+#thumbnail .ytd-thumbnail,
+/*#img .yt-img-shadow*/
+ytd-playlist-video-renderer.style-scope ytd-thumbnail:nth-child(1)
+{  height: 40px !important;  padding: 0px 0px 0px 0px !important;  margin: 0 0 0 0 !important;  border: none !important;  }/**/
+/*.ytd-rich-grid-media
+{  height: 120px !important;  padding: 0px 0px 0px 0px !important;  margin: 0 0 0 0 !important;  border: none !important;  }/**/
+/*  song time  */
+ytd-thumbnail-overlay-time-status-renderer
+{  font-size: 17px !important;  color: #FCFEFF !important;  }/**/
 
-.ytd-thumbnail, #overlays
-{   background: none !important;
-    width: 170px !important;  right: -20px !important;  float: right !important;  }
-/*  pls  times :  */
-.ytd-thumbnail-overlay-time-status-renderer {
-    width: 140px !important;  color: #BDF !important;
-    text-shadow: rgb(20, 36, 52) 0px 0px 2px,
-        rgb(20, 66, 122) 0px 0px 4px, rgb(12, 36, 100) 0px 0px 8px !important;
-    font-size: 16px !important;  text-align: right;  }
