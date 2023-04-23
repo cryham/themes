@@ -3,9 +3,11 @@
 
 #  Script creates a im.cvs file for import to table of movies
 #  on my website: https://cryham.tuxfamily.org/movies/
-#  From im.html file, as exported bookmarks from Firefox.
+#  From bookmarks.html file, as exported from Firefox.
 #  Only bookmarks containing ** in name, and following syntax:
 #  Title (year) - rate **tags
+
+#  edit below if needed:  file =  expfile =
 
 import os
 import re
@@ -15,18 +17,24 @@ import string
 
 
 #  const dict  bookmark tag shorcuts
-#-------------------------------------
-sh_tag = {  # 🎭📚⚔️ 🕒🕰🕰️ 🪄✨ 🕹🎮 🧗‍♂️⛰️ 🖼🖼️ 🪑🐎
+#------------------------------------------------
+sh_tag = {  # 🎭📚 🕰🕰️ 🪄 🕹 🧗‍♂️ 🖼 🪑🗡️
+'act':'🔫Action', 'crm':'⚖️Crime', 'spy':'🕵️Spy',  # act
+
+'cmd':'😁Comedy', 'rom':'💕Romance',  # genre
+'drm':'☹️Drama',   'prd':'🤪Parody',
+'hor':'😱Horror', 'mst':'❔Mystery',
+
+'fan':'🐉Fantasy','adv':'⛰️Adventure', 
+'wst':'🐎Western','mdv':'⚔️Medieval',  # old theme
+'doc':'📜Documentary',
+
+'3d':'💎3D', 'gam':'🎮Game', 'drw':'🖼️Drawing',  # style
+'cmc':'🎨Comic', 'bok':'📖Book',  'sph':'🦸SuperHero',  # based on
 'sf':'🔮SciFi',
-'act':'🔫Action','cmd':'😁Comedy','rom':'💕Romance',
-'crm':'⚖️Crime','drm':'☹️Drama','prd':'🤪Parody',
-'wst':'🐎Western','hor':'😱Horror','mst':'❔Mystery',
-'adv':'⛰️Adventure','fan':'🐉Fantasy',
-'3d':'💎3D','gam':'🎮Game','drw':'🖼️Drawing', # style
-'cmc':'🎨Comic','bok':'📖Book','sph':'🦸SuperHero', # based
-'spc':'🌌Space','ftr':'🔭Future','tmt':'🕒Time', # scifi
-'mgc':'✨Magic','zmb':'🧟Zombie','aln':'👽Alien', # theme
-'hs':'🏫School','drg':'💊Drugs','war':'💣War',  # topic
+'spc':'🌌Space', 'ftr':'🔭Future','tmt':'🕒Time',  # sci-fi
+'mgc':'✨Magic', 'zmb':'🧟Zombie','aln':'👽Alien', # theme
+'hs':'🏫School', 'drg':'💊Drugs', 'war':'💣War',   # topic
 }
 
 #------------------------------------------------
@@ -47,7 +55,8 @@ class Movie:
 
 
 #  open file  ------------------------
-file = open('im.html', 'r')
+file = open('bookmarks.html', 'r')
+#file = open('/home/ch/dn/bookmarks.html', 'r')
 lines = file.readlines()
 
 movies = 0
@@ -90,7 +99,7 @@ for line in lines:
                 tagcnt[t] = tagcnt.get(t, 0) + 1
                 st = st + sh_tag.get(t, t) + ' '
 
-            print(year+' | '+movie+' | '+ rate +' | '+st)  # test
+            #print(year+' | '+movie+' | '+ rate +' | '+st)  # test
             movies += 1
             all.append(Movie(year, movie, url, rate, st))
 
@@ -129,6 +138,8 @@ print('Last updated on: {}'.format(date_str))
 sAll = sorted(all, key=attrgetter('year'), reverse=True)  # new to old
 
 expfile = open('im.csv', 'w')
+#expfile = open('/home/ch/dn/im.csv', 'w')
+
 expfile.write('Year,Title with link,IMDb rate,Genre & tags\n')
 for m in sAll:
     expfile.write(m.year+',' #+m.movie+','+
