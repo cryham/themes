@@ -19,7 +19,8 @@ printable = set(string.printable)
 #------------------------
 groups = [
     # keyword,  group name,  title in html
-    ['----', 'other', 'Other 🚗🚀'],  # default
+    ['----', 'other', 'Other'],  # default
+    ['🚗', 'car', 'Car 🚗🚀'],  # todo:
     ['movie','movies', 'Movies 🎥🎬📺'],
     ['fun',  'fun',   'Fun 😂😀😜'],
     ['tiktok', 'fun', ''],
@@ -38,15 +39,15 @@ groups = [
     ['covers','piano 🎹', ''],
 
     ['folk',     'folk 🎻', 'Metal &nbsp; 🌀🌌🔮⬛️🌋🎻'],
-    ['black',    'black ⬛️', ''],
+    ['black met','black ⬛️', ''],
     ['melodic',  'melodic 🌀', ''],
     ['symphonic','symphonic 🌌', ''],
     ['gothic',   'gothic 🎻', ''],
     ['power',    'power 🌋', ''],
     ['metal',    'Heavy 💣', ''],
 
-    ['punkrock', 'punkRock 🍀', 'PunkRock 🍀'],
-    ['punk',     'punkRock 🍀', ''],
+    ['poppunk', 'popPunk 🍀', 'PopPunk 🍀'],
+    ['punk',    'popPunk 🍀', ''],
 
     ['rock old',  'rock Old', 'Rock 🗻'],
     ['poprock',  'rock Old', ''],
@@ -72,7 +73,7 @@ groups = [
 i = 0
 for g in groups:
     i += 1
-    #print('%02d' % i + ' - ' + g[0] + ' - ' + g[1])
+    print('%02d' % i + ' - ' + g[0] + ' - ' + g[1])
 
 
 #  item  title, url, group
@@ -111,7 +112,7 @@ playlists = 0
 pls = []
 vids = 0  # count of videos in playlist
 for line in lines:
-    r = re.match(r'.*yt-formatted-string class="style-scope ytd-thumbnail-overlay-side-panel-renderer.*>(\d+)<', line)
+    r = re.match(r'.*>(\d+) videos</yt-formatted-string>', line)
     if r:
         vids = r.groups()[0]
         #print(vids)
