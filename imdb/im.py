@@ -29,12 +29,15 @@ sh_tag = {  # 🎭📚 🕰🕰️ 🪄 🕹 🧗‍♂️ 🖼 🪑🗡️
 'wst':'🐎Western','mdv':'⚔️Medieval',  # old theme
 'doc':'📜Documentary',
 
-'3d':'💎3D', 'gam':'🎮Game', 'drw':'🖼️Drawing',  # style
-'cmc':'🎨Comic', 'bok':'📖Book',  'sph':'🦸SuperHero',  # based on
-'sf':'🔮SciFi',
-'spc':'🌌Space', 'ftr':'🔭Future','tmt':'🕒Time',  # sci-fi
+'3d':'💎3D',  'gam':'🎮Game', 'drw':'🖼️Drawing',  # style
+'cmc':'🎨Comic',  'bok':'📖Book',  'sph':'🦸SuperHero',  # based on
+
+'sf':'🔮SciFi',   'spc':'🌌Space', 'tmt':'🕒Time',  # sci-fi
+'ftr':'🔭Future', 'dst':'🏚️Dystopia',  # sf ftr
+
 'mgc':'✨Magic', 'zmb':'🧟Zombie','aln':'👽Alien', # theme
 'hs':'🏫School', 'drg':'💊Drugs', 'war':'💣War',   # topic
+'dis':'💥Disaster', 'rlg':'⛪Religion',
 }
 
 #------------------------------------------------
