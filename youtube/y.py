@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 #  Script creates web.html with list of playlists
-#  for my website: https://cryham.tuxfamily.org/playlists/
+#  for my website: https://cryham.org/entertainment/playlists/
 #  From y.html file, which is saved from:
 #  https://www.youtube.com/channel/UCzFcqUTGAUqpaNk4k7BQg6w/playlists?view=1&sort=lad
 #  Keep PgDn to bottom until all playlists are loaded.
@@ -20,7 +20,10 @@ printable = set(string.printable)
 groups = [
     # keyword,  group name,  title in html
     ['----', 'other', 'Other'],  # default
-    ['🚗', 'car', 'Car 🚗🚀'],  # todo:
+    ['drift', 'car', 'Car 🚗🚀'],
+    ['offroad', 'car', ''],
+    ['rally', 'car', ''],
+
     ['movie','movies', 'Movies 🎥🎬📺'],
     ['fun',  'fun',   'Fun 😂😀😜'],
     ['tiktok', 'fun', ''],
@@ -110,24 +113,63 @@ lines = file.readlines()
 
 playlists = 0
 pls = []
+
+typ = 0
 vids = 0  # count of videos in playlist
+
+#  foreach line  --------
 for line in lines:
-    r = re.match(r'.*>(\d+) videos</yt-formatted-string>', line)
+
+# type 1: first 30:
+#     __text">204 videos</div>
+#     title="Fun 😂 - Various, Internet 🌎"><a href="https://www.youtube.com/watch?v=xa94N7rcHfs&amp;list=PLF7rhUP3syrYmUY1sFCk_VxUku8EqkBMs&amp;pp=gAQB" class="yt-
+
+# type 2: later, more 160:
+#     ">41 videos</yt-formatted-string>
+#     ytd-grid-playlist-renderer" href="https://www.youtube.com/watch?v=M8uPvX2te0I&amp;list=PLF7rhUP3syrbtvog6yaC0uxb0bMUxN6ZW&amp;pp=gAQB" title="🎈Pop">
+
+    #  get videos count, is before title and url  ----
+    r = re.match(r'.*>(\d+) videos</div>', line)
     if r:
         vids = r.groups()[0]
-        #print(vids)
-    r = re.match(r'.*<a id="video-title".*title="(.*)".*href="(.*)".*', line)
-    if r:
-        playlists += 1
-        title = r.groups()[0]
-        url = r.groups()[1]
-        pls.append(Plist(title, url, vids))
+        #print('type 1: '+ vids)
+        typ = 1
+    else:
+        r = re.match(r'.*>(\d+) videos</yt-formatted-string>', line)
+        if r:
+            vids = r.groups()[0]
+            #print('type 2: '+ vids)
+            typ = 2
+    
+    #  get title and url  ----
+    if typ == 1:
+        r = re.match(r'.*title="(.*)"><a href="(.*)" class.*', line)
+        if r:
+            # print(line)
+            playlists += 1
+            title = r.groups()[0]
+            url = r.groups()[1]
+            #print(title+' '+line)
+            pls.append(Plist(title, url, vids))
+            typ = 0
+            vids = 0
+    elif typ == 2:
+        r = re.match(r'.*<a id="video-title".*href="(.*)".*title="(.*)".*', line)
+        if r:
+            # print(line)
+            playlists += 1
+            title = r.groups()[1]
+            url = r.groups()[0]
+            #print(title+' '+line)
+            pls.append(Plist(title, url, vids))
+            typ = 0
+            vids = 0
 
 spls = sorted(pls, key=attrgetter('group'))
 
 
 #  print  ------------------------
-date_str = datetime.datetime.today().strftime('%Y-%m-%d %H:%M')
+date_str = datetime.datetime.today().strftime('%Y-%m-%d') # %H:%M')
 
 g = ''
 videos = 0  # all count
@@ -153,12 +195,12 @@ print('Last updated on: {}'.format(date_str))
 expfile = open('web.html', 'w')
 #expfile.write('<h1>Overview</h1>\n')
 expfile.write('This page gathers my playlists from my <a href="https://www.youtube.com/channel/UCzFcqUTGAUqpaNk4k7BQg6w/playlists?view=1&sort=lad" target="_blank" rel="noopener">youtube channel.</a>\n')
-expfile.write('<em>Because browsing them all there is hopeless. Grouping and sorting by name is impossible.</em>\n\n')
-expfile.write('Total playlists: {}</p>\n'.format(playlists))
-expfile.write('Total videos: {}</p>\n\n'.format(videos))
-expfile.write('Last updated on: {}</p>\n'.format(date_str))
+expfile.write('<em>Because browsing them all there is hopeless. Grouping and sorting by name is impossible, etc.</em>\n\n')
+expfile.write('Total playlists: {}\n'.format(playlists))
+expfile.write('Total videos: {}\n\n'.format(videos))
+expfile.write('Last updated on: {}\n'.format(date_str))
 expfile.write('&nbsp;\n<hr />\n\n')
-expfile.write('<h1>Movies, Fun, Games, Nature</h1><br />\n')
+expfile.write('<h1>Movies, Fun, Games, Nature</h1>\n')
 g = ''
 for p in spls:
     if g != p.group2:
@@ -166,10 +208,10 @@ for p in spls:
         gg = p.group3
         if gg != '':
             if gg[0:3] == 'Cov':  # Covers - start of Music
-                expfile.write('<h1>Music</h1><br />\n')
-            expfile.write('<h2>{}</h2><br />\n'.format(gg))
-        expfile.write('<h3>{}</h3><br />\n'.format(g))
+                expfile.write('<h1>Music</h1>\n')
+            expfile.write('<h2>{}</h2>\n'.format(gg))
+        expfile.write('<h3>{}</h3>\n'.format(g))
 
-    #expfile.write('<a href="{}">{}</a><br />\n'.format(p.url, p.title))
-    expfile.write('<a href="{}">{} - ({})</a><br />\n'.format(p.url, p.title, p.videos))
+    #expfile.write('<a href="{}">{}</a>\n'.format(p.url, p.title))
+    expfile.write('<a href="{}">{} - ({})</a>\n'.format(p.url, p.title, p.videos))
 expfile.close()
