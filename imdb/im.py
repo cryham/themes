@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 #  Script creates a im.cvs file for import to table of movies
-#  on my website: https://cryham.tuxfamily.org/movies/
+#  on my website: https://cryham.org/entertainment/favourite-movies/
 #  From bookmarks.html file, as exported from Firefox.
 #  Only bookmarks containing ** in name, and following syntax:
 #  Title (year) - rate **tags
@@ -59,7 +59,6 @@ class Movie:
 
 #  open file  ------------------------
 file = open('bookmarks.html', 'r')
-#file = open('/home/ch/dn/bookmarks.html', 'r')
 lines = file.readlines()
 
 movies = 0
@@ -141,7 +140,6 @@ print('Last updated on: {}'.format(date_str))
 sAll = sorted(all, key=attrgetter('year'), reverse=True)  # new to old
 
 expfile = open('im.csv', 'w')
-#expfile = open('/home/ch/dn/im.csv', 'w')
 
 expfile.write('Year,Title with link,IMDb rate,Genre & tags\n')
 for m in sAll:
